@@ -1,0 +1,12 @@
+node_modules
+dist
+.claude
+
+# Source material and internal notes stay local. The site only needs public/.
+/4 Wheeler Components/
+/Bar Bending/
+/CPR/
+/Plumbing/
+/Technincian Mechatronics/
+/Personal Info/
+/CONTENT_NOTES.md

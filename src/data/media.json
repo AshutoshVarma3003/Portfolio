@@ -1,0 +1,372 @@
+{
+  "ev": {
+    "images": [
+      {
+        "name": "assessment",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "external-components-charging-port",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "external-components",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "fast-charging",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "home-charging",
+        "w": 1600,
+        "h": 905
+      },
+      {
+        "name": "internal-components-inverter",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "internal-components",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "module-selection",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "power-flow-module",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "power-train-system-accelerator",
+        "w": 1600,
+        "h": 902
+      },
+      {
+        "name": "quiz",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "start-screen",
+        "w": 1600,
+        "h": 899
+      }
+    ],
+    "videos": [
+      {
+        "name": "external-component",
+        "w": 1280,
+        "h": 720,
+        "duration": 20
+      },
+      {
+        "name": "fast-charging",
+        "w": 1280,
+        "h": 720,
+        "duration": 19
+      },
+      {
+        "name": "home-charging",
+        "w": 1280,
+        "h": 720,
+        "duration": 14
+      },
+      {
+        "name": "internal-components",
+        "w": 1280,
+        "h": 720,
+        "duration": 20
+      },
+      {
+        "name": "powertrain-system",
+        "w": 1280,
+        "h": 720,
+        "duration": 32
+      }
+    ]
+  },
+  "bar": {
+    "images": [
+      {
+        "name": "digital-twin-in-use",
+        "w": 1600,
+        "h": 1066
+      },
+      {
+        "name": "machine-highlighted",
+        "w": 1600,
+        "h": 1624
+      }
+    ],
+    "videos": []
+  },
+  "cpr": {
+    "images": [
+      {
+        "name": "aed",
+        "w": 1594,
+        "h": 720
+      },
+      {
+        "name": "cpr-process",
+        "w": 1594,
+        "h": 720
+      },
+      {
+        "name": "calling-ems",
+        "w": 1594,
+        "h": 720
+      },
+      {
+        "name": "intro",
+        "w": 1594,
+        "h": 720
+      },
+      {
+        "name": "lying-down",
+        "w": 1594,
+        "h": 720
+      },
+      {
+        "name": "rescue-breath",
+        "w": 1594,
+        "h": 720
+      }
+    ],
+    "videos": [
+      {
+        "name": "aed-pad-placement",
+        "w": 1280,
+        "h": 578,
+        "duration": 5
+      },
+      {
+        "name": "cpr-process",
+        "w": 1280,
+        "h": 578,
+        "duration": 10
+      },
+      {
+        "name": "calling-ems",
+        "w": 1280,
+        "h": 578,
+        "duration": 6
+      },
+      {
+        "name": "checking-pulse",
+        "w": 1280,
+        "h": 578,
+        "duration": 4
+      },
+      {
+        "name": "intro",
+        "w": 1280,
+        "h": 578,
+        "duration": 4
+      },
+      {
+        "name": "movement-and-camera",
+        "w": 1280,
+        "h": 578,
+        "duration": 10
+      },
+      {
+        "name": "rescue-breaths",
+        "w": 1280,
+        "h": 578,
+        "duration": 5
+      },
+      {
+        "name": "tapping-shoulder",
+        "w": 1280,
+        "h": 578,
+        "duration": 2
+      }
+    ]
+  },
+  "faucet": {
+    "images": [
+      {
+        "name": "batteries-in-battery-case",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "cleaning-faucet",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "component-selection",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "connecting-supply-hose",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "control-box",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "quiz",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "spirit-level",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "start-screen",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "name": "testing-faucet",
+        "w": 1600,
+        "h": 899
+      }
+    ],
+    "videos": [
+      {
+        "name": "cleaning-control-box",
+        "w": 1280,
+        "h": 720,
+        "duration": 5
+      },
+      {
+        "name": "cleaning-faucet",
+        "w": 1280,
+        "h": 720,
+        "duration": 6
+      },
+      {
+        "name": "cleaning-sink",
+        "w": 1280,
+        "h": 720,
+        "duration": 3
+      },
+      {
+        "name": "final-demo-after-completion",
+        "w": 1280,
+        "h": 720,
+        "duration": 8
+      },
+      {
+        "name": "inserting-battery-pack",
+        "w": 1280,
+        "h": 720,
+        "duration": 19
+      },
+      {
+        "name": "setting-spirit-level",
+        "w": 1280,
+        "h": 720,
+        "duration": 13
+      }
+    ]
+  },
+  "robot": {
+    "images": [
+      {
+        "name": "explorer-mode-1",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "explorer-mode-2",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "final-demo",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "free-look-full-body",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "ir-sensor-install",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "logic-setup",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "motor-install",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "quiz",
+        "w": 1600,
+        "h": 900
+      }
+    ],
+    "videos": [
+      {
+        "name": "final-step-robot-following-logic-and-line",
+        "w": 1280,
+        "h": 720,
+        "duration": 27
+      },
+      {
+        "name": "free-look",
+        "w": 1280,
+        "h": 720,
+        "duration": 10
+      },
+      {
+        "name": "installing-ldr-sensors",
+        "w": 1280,
+        "h": 720,
+        "duration": 28
+      },
+      {
+        "name": "installing-wheels",
+        "w": 1280,
+        "h": 720,
+        "duration": 9
+      },
+      {
+        "name": "logic-system",
+        "w": 1280,
+        "h": 720,
+        "duration": 16
+      },
+      {
+        "name": "ppe",
+        "w": 1280,
+        "h": 720,
+        "duration": 6
+      },
+      {
+        "name": "wiring",
+        "w": 1280,
+        "h": 720,
+        "duration": 12
+      }
+    ]
+  }
+}
