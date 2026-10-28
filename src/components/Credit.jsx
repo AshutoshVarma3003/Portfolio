@@ -1,8 +1,8 @@
-export default function Credit({ credit, className = '' }) {
+export default function Credit({ credit, className = '', prefix = '' }) {
   if (!credit) return null;
   return (
     <p className={`credit ${className}`}>
-      <a href={credit.href} target="_blank" rel="noopener noreferrer">
+      {prefix}<a href={credit.href} target="_blank" rel="noopener noreferrer">
         {credit.label}
       </a>
     </p>

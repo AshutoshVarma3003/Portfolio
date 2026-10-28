@@ -1,5 +1,5 @@
 export default {
-  aspect: '1594 / 720',
+  aspect: '2392 / 1080',
   details: [
     { k: 'Role', v: 'Team project; I did a large share of the development' },
     { k: 'Context', v: 'In-house AMMACHI Labs project, built for AMPLE' },

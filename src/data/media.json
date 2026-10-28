@@ -114,83 +114,83 @@
     "images": [
       {
         "name": "aed",
-        "w": 1594,
-        "h": 720
+        "w": 1600,
+        "h": 722
       },
       {
         "name": "cpr-process",
-        "w": 1594,
-        "h": 720
+        "w": 1600,
+        "h": 722
       },
       {
         "name": "calling-ems",
-        "w": 1594,
-        "h": 720
+        "w": 1600,
+        "h": 722
       },
       {
         "name": "intro",
-        "w": 1594,
-        "h": 720
+        "w": 1600,
+        "h": 722
       },
       {
         "name": "lying-down",
-        "w": 1594,
-        "h": 720
+        "w": 1600,
+        "h": 722
       },
       {
         "name": "rescue-breath",
-        "w": 1594,
-        "h": 720
+        "w": 1600,
+        "h": 722
       }
     ],
     "videos": [
       {
         "name": "aed-pad-placement",
-        "w": 1280,
-        "h": 578,
-        "duration": 5
+        "w": 1920,
+        "h": 866,
+        "duration": 3
       },
       {
         "name": "cpr-process",
-        "w": 1280,
-        "h": 578,
+        "w": 1920,
+        "h": 866,
         "duration": 10
       },
       {
         "name": "calling-ems",
-        "w": 1280,
-        "h": 578,
-        "duration": 6
+        "w": 1920,
+        "h": 866,
+        "duration": 8
       },
       {
         "name": "checking-pulse",
-        "w": 1280,
-        "h": 578,
-        "duration": 4
+        "w": 1920,
+        "h": 866,
+        "duration": 3
       },
       {
         "name": "intro",
-        "w": 1280,
-        "h": 578,
-        "duration": 4
+        "w": 1920,
+        "h": 866,
+        "duration": 3
       },
       {
         "name": "movement-and-camera",
-        "w": 1280,
-        "h": 578,
+        "w": 1920,
+        "h": 866,
         "duration": 10
       },
       {
         "name": "rescue-breaths",
-        "w": 1280,
-        "h": 578,
+        "w": 1920,
+        "h": 866,
         "duration": 5
       },
       {
         "name": "tapping-shoulder",
-        "w": 1280,
-        "h": 578,
-        "duration": 2
+        "w": 1920,
+        "h": 866,
+        "duration": 3
       }
     ]
   },

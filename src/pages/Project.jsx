@@ -39,10 +39,10 @@ export default function Project() {
 
       <div className="container">
         <figure className="case-hero" style={{ '--ar': c.aspect }}>
-          <div className={`case-hero__frame ${p.fit === 'contain' ? 'is-contain' : ''}`}>
+          <div className={`case-hero__frame ${p.fit === 'contain' ? 'is-contain' : ''}`} style={p.fit === 'contain' && p.bg ? { background: p.bg } : undefined}>
             <Media slug={p.media} item={p.hero} sizes="(min-width: 1200px) 1200px, 100vw" eager />
           </div>
-          <Credit credit={p.credit} />
+          <Credit credit={p.cover ? p.coverCredit : p.credit} />
         </figure>
 
         <dl className="details">
@@ -108,7 +108,7 @@ export default function Project() {
           {others.map((o) => (
             <li key={o.slug}>
               <Link to={`/work/${o.slug}`} className="related__card">
-                <span className={`related__img ${o.fit === 'contain' ? 'is-contain' : ''}`}>
+                <span className={`related__img ${o.fit === 'contain' ? 'is-contain' : ''}`} style={o.fit === 'contain' && o.bg ? { background: o.bg } : undefined}>
                   <Media slug={o.media} item={o.hero} sizes="(min-width: 900px) 280px, 50vw" />
                 </span>
                 <span className="related__title">{o.title}</span>

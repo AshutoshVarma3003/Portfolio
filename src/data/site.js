@@ -18,6 +18,11 @@ export const credits = {
   },
 };
 
+export const coverCredits = {
+  magnific: { label: 'Designed by Magnific', href: 'https://www.magnific.com/' },
+  pexels: { label: 'Shot by Polina Tankilevitch on Pexels', href: 'https://www.pexels.com/@polina-tankilevitch/' },
+};
+
 export const experience = {
   org: 'AMMACHI Labs',
   title: 'Game Designer / Developer',

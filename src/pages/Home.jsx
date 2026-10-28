@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import PageMeta from '../components/PageMeta.jsx';
-import Media from '../components/Media.jsx';
 import ProjectFeature from '../components/ProjectFeature.jsx';
 import { projects } from '../data/projects.js';
 import { site, experience } from '../data/site.js';
 import { asset } from '../lib.js';
 
 export default function Home() {
-  const heroProject = projects.find((p) => p.slug === 'cpr-aed-simulation');
-
   return (
     <>
       <PageMeta
@@ -18,7 +15,15 @@ export default function Home() {
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__media">
-          <Media slug={heroProject.media} item={heroProject.banner} sizes="100vw" eager />
+          <img
+            src={asset('media/me/portrait-1280.webp')}
+            srcSet={`${asset('media/me/portrait-800.webp')} 800w, ${asset('media/me/portrait-1280.webp')} 1280w`}
+            sizes="100vw"
+            width="1280"
+            height="720"
+            alt="Ashutosh Varma, with long hair and glasses, showing simulations to visitors at an exhibition stand."
+            fetchPriority="high"
+          />
         </div>
         <div className="container hero__inner">
           <p className="label">{site.role}</p>
@@ -35,12 +40,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <p className="hero__credit">
-          <Link to={`/work/${heroProject.slug}`}>{heroProject.title}</Link>
-          {' · '}
-          <a href={heroProject.credit.href} target="_blank" rel="noopener noreferrer">{heroProject.credit.label}</a>
-        </p>
-      </section>
+     </section>
 
       <section className="section container" aria-labelledby="work-title">
         <header className="section__head">

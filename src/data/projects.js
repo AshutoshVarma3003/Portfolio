@@ -1,6 +1,6 @@
 // Central project data. Homepage and index fields live here; the full
 // case-study content is added per project in Stage 4.
-import { credits } from './site.js';
+import { credits, coverCredits } from './site.js';
 
 export const projects = [
   {
@@ -13,7 +13,11 @@ export const projects = [
     tools: ['Unity 6', 'URP', 'Cinemachine', 'Unity Splines', 'Visual Scripting'],
     credit: credits.ncert,
     media: 'ev',
-    hero: { name: 'internal-components-inverter', w: 1600, h: 900, alt: 'X-ray view of an electric car chassis in the simulation, with the inverter selected and an information card open.' },
+    cover: true,
+    coverCredit: coverCredits.magnific,
+    fit: 'contain',
+    bg: '#003152',
+    hero: { name: 'cover', w: 1600, h: 1600, alt: 'Cover illustration: a cut-away diagram of a car showing its chassis and drivetrain parts.' },
   },
   {
     slug: 'bar-bending-simulator',
@@ -38,8 +42,11 @@ export const projects = [
     tools: ['Unity 6', 'URP', 'C#', 'WebGL', 'SCORM 2004'],
     credit: credits.ammachi,
     media: 'cpr',
-    banner: { name: 'intro', w: 1600, h: 723, alt: 'A restaurant dining room in the simulation, with diners seated at tables near large windows.' },
-    hero: { name: 'cpr-process', w: 1600, h: 723, alt: 'First-person view of giving chest compressions, with a heart-rate style counter reading 109 and the label In range.' },
+    cover: true,
+    coverCredit: coverCredits.magnific,
+    fit: 'contain',
+    bg: '#ffffff',
+    hero: { name: 'cover', w: 1600, h: 1051, alt: 'Cover illustration: two paramedics giving chest compressions and ventilation to a patient on a stretcher.' },
   },
   {
     slug: 'sensor-faucet',
@@ -51,7 +58,9 @@ export const projects = [
     tools: ['Unity 6', 'URP', 'Cinemachine', 'Visual Scripting', 'DOTween'],
     credit: credits.ncert,
     media: 'faucet',
-    hero: { name: 'spirit-level', w: 1600, h: 900, alt: 'Spirit level shown above a control box, with a Set Angle control to adjust its tilt.' },
+    cover: true,
+    coverCredit: coverCredits.pexels,
+    hero: { name: 'cover', w: 1600, h: 1067, alt: 'Cover photograph: hands under water running from a sensor faucet into a white basin.' },
   },
   {
     slug: 'logic-robot',
@@ -63,7 +72,9 @@ export const projects = [
     tools: ['Unity 6', 'C#', 'Unity Timeline', 'Visual Scripting', 'Localization'],
     credit: credits.ncert,
     media: 'robot',
-    hero: { name: 'final-demo', w: 1600, h: 900, alt: 'Robot Logic table assigning an action to each pair of sensor readings, next to a top-down view of the robot on a black track.' },
+    cover: true,
+    coverCredit: coverCredits.magnific,
+    hero: { name: 'cover', w: 1600, h: 1067, alt: 'Cover photograph: a four-wheeled line-follower robot with wiring and sensors, seen from above.' },
   },
 ];
 

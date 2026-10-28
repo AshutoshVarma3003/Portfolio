@@ -8,7 +8,7 @@ const SIZES = '(min-width: 900px) 700px, 100vw';
 // the entries alternate sides. DOM order is image then text so mobile reads
 // image-first; desktop reordering is done in CSS.
 export default function ProjectFeature({ project, index }) {
-  const { slug, title, kicker, summary, role, tools, credit, media, hero, fit } = project;
+  const { slug, title, kicker, summary, role, tools, credit, media, hero, fit, bg, cover, coverCredit } = project;
   const num = String(index + 1).padStart(2, '0');
   const cls = ['feature', index % 2 ? 'feature--reverse' : '', fit === 'contain' ? 'feature--contain' : '']
     .filter(Boolean)
@@ -17,12 +17,12 @@ export default function ProjectFeature({ project, index }) {
   return (
     <article className={cls}>
       <div className="feature__visual">
-        <figure className="feature__figure">
+        <figure className="feature__figure" style={fit === 'contain' && bg ? { background: bg } : undefined}>
           <Link to={`/work/${slug}`} tabIndex={-1} aria-hidden="true" className="feature__imglink">
             <Media slug={media} item={hero} sizes={SIZES} />
           </Link>
         </figure>
-        <Credit credit={credit} />
+        <Credit credit={cover ? coverCredit : credit} />
       </div>
 
       <div className="feature__text">
