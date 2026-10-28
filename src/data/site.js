@@ -36,5 +36,5 @@ export const experience = {
 };
 
 export const education = [
-  { what: 'B.Tech Computer Science', where: 'Amrita Vishwa Vidyapeetham', when: 'July 2021 – present' },
+  { what: 'B.Tech Computer Science', where: 'Amrita Vishwa Vidyapeetham', when: 'July 2021 – June 2025' },
 ];

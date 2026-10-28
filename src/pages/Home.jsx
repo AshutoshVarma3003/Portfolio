@@ -16,11 +16,11 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__media">
           <img
-            src={asset('media/me/portrait-1280.webp')}
-            srcSet={`${asset('media/me/portrait-800.webp')} 800w, ${asset('media/me/portrait-1280.webp')} 1280w`}
+            src={asset('media/me/portrait-crop-1640.webp')}
+            srcSet={`${asset('media/me/portrait-crop-820.webp')} 820w, ${asset('media/me/portrait-crop-1640.webp')} 1640w`}
             sizes="100vw"
-            width="1280"
-            height="720"
+            width="1640"
+            height="1440"
             alt="Ashutosh Varma, with long hair and glasses, showing simulations to visitors at an exhibition stand."
             fetchPriority="high"
           />
