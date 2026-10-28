@@ -29,9 +29,9 @@ export default function Home() {
           <p className="label">{site.role}</p>
           <h1 id="hero-title" className="hero__title">I design and build interactive 3D experiences.</h1>
           <p className="hero__lead">
-            I make interactive simulations and educational games in Unity. At AMMACHI Labs I have
-            contributed to nearly 40 simulations that teach vocational skills, from electric
-            vehicles to plumbing to robotics.
+            I am a game designer and developer at AMMACHI Labs. I build educational simulations in
+            Unity, nearly 40 so far, that teach vocational skills from electric vehicles to plumbing
+            to robotics.
           </p>
           <div className="hero__actions">
             <Link to="/work" className="button">View work</Link>
@@ -74,18 +74,25 @@ export default function Home() {
       <section className="section container split" aria-labelledby="about-title">
         <header>
           <p className="label">About</p>
-          <h2 id="about-title" className="h2">How I work</h2>
+          <h2 id="about-title" className="h2">Why game design</h2>
         </header>
         <div>
           <p className="lead">
-            A simulation should let a learner do the task in the order a technician would, tell
-            them why a step went wrong, and check what they learned at the end. I build that whole
-            loop: the interaction logic, cameras and interface, bilingual text and narration, and
-            the assessment.
+            I started as a player and then wanted to know how games were made. Computer science
+            gave me a way in: breaking a complex system into parts and seeing how they fit
+            together. I tried animation first and found I cared more about building the
+            interactive side than the cutscenes.
           </p>
           <p className="lead">
-            My background is in computer science, and I am applying to study game design and
-            development at master’s level to go deeper on the design side.
+            What keeps me here is that games can teach. My final-year project was a 2D game
+            retelling a Kerala myth, and I contributed to a research paper on how games can improve
+            learning. At AMMACHI Labs I do this for real, with simulations that teach trades to
+            people who will use them.
+          </p>
+          <p className="lead">
+            Most of what I know I have learned on the job and by teaching myself. I now want
+            structured study and a wider community of designers and developers, so I am applying to
+            master’s programmes in game design and development in the UK.
           </p>
           <Link to="/about" className="arrow-link">Read more <span aria-hidden="true">→</span></Link>
         </div>

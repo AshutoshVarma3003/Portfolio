@@ -34,7 +34,7 @@ export default {
     {
       title: 'My contribution',
       blocks: [
-        { p: 'I modernised the software, fixed the faults above and carried the update out on site. At the centres I checked each machine against the software, calibrated it, installed the new build and went through the workflow with the instructors. The original simulator and hardware were not mine.' },
+        { p: 'I modernised the software, fixed the faults above and took the update to the centres. I travelled with a colleague who handled the hardware while I handled the software: matching the software’s settings to each machine’s sensors, installing the new build and going through the workflow with the instructors. The original simulator was not mine.' },
       ],
     },
     {

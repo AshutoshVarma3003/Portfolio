@@ -11,18 +11,28 @@ export default function About() {
       <section className="section container split">
         <header>
           <p className="label">About</p>
-          <h1 className="h1">Designing learning that you can do with your hands</h1>
+          <h1 className="h1">Why game design</h1>
         </header>
         <div>
           <p className="lead">
-            I am a game designer and developer with a background in computer science and
-            professional experience creating educational simulations and interactive learning
-            experiences.
+            I started as a player and then wanted to know how games were made. A computer science
+            elective at school introduced me to breaking a complex system into parts and seeing
+            how they fit together, and that led me to game development. I experimented with
+            animation and 3D modelling in Blender first, then found that engines like Unity and
+            Unreal drew me towards programming and the technical side of interactive experiences.
           </p>
           <p className="lead">
-            At AMMACHI Labs I contributed to nearly 40 simulations, taking on development,
-            research, quality assurance and educational content creation. I am interested in how
-            games can make learning more engaging and effective.
+            My degree was in computer science rather than games, but my final-year project let me
+            apply it: a 2D game retelling a mythological story from Kerala. With my team I also
+            contributed to a research paper on how games can enhance learning. That project joined
+            the things I care about: technology, interactive media and education.
+          </p>
+          <p className="lead">
+            At AMMACHI Labs I do this professionally. I design and build simulations that teach
+            vocational skills to students and children, and that are released for wide public use
+            on the DIKSHA platform. Much of my knowledge of game design comes from independent
+            learning and real projects. I now want structured study, and to work alongside a wider
+            community of designers and developers on projects that challenge me.
           </p>
         </div>
       </section>
@@ -53,6 +63,8 @@ export default function About() {
             {education.map((e) => (
               <li key={e.what}><strong>{e.what}</strong>, {e.where} ({e.when})</li>
             ))}
+            <li><strong>Final-year project</strong>, a 2D game retelling a mythological story from Kerala; I also contributed to a team research paper on how games can enhance learning.</li>
+            <li><strong>Amrita AHEAD</strong> (February – April 2024), assisting a faculty member on a 2D hyper-casual game in Unity.</li>
             <li><strong>Certificate of Recognition</strong>, AMMACHI Labs, 29 January 2026, for outstanding contributions, teamwork and dedication.</li>
           </ul>
           <p className="muted small">

@@ -30,8 +30,10 @@ export const experience = {
   summary:
     'I have contributed to nearly 40 simulations for NCERT, published on the DIKSHA platform, working across development, research, quality assurance and educational content. I designed and developed many of them largely or entirely myself; on others I was one member of a larger team.',
   extras: [
-    'Modernised the software of the Bar Bending Simulator used at L&T educational centres across India.',
-    'Building simulations for AMPLE, AMMACHI Labs’ own learning platform.',
+    'Joined as a Game Designer intern in January 2025 and moved to a full-time role in June 2025.',
+    'Besides development: on-site research for authenticity, QA testing for other developers and designers, and scripting educational videos.',
+    'Modernised the software of the Bar Bending Simulator used at L&T educational centres across India, travelling to centres with a colleague who handled the hardware.',
+    'Building simulations for AMPLE, AMMACHI Labs’ own learning platform, whose courses include first responder training and biomedical waste management.',
   ],
 };
 
