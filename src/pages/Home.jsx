@@ -56,7 +56,7 @@ export default function Home() {
           <TypedHeadline id="hero-title" className="hero__title" text={HEADLINE} play={play} onDone={finish} />
           <p className="hero__lead hero__later">
             I am a game designer and developer at AMMACHI Labs. I build educational simulations in
-            Unity, nearly 40 so far, that teach vocational skills from electric vehicles to plumbing
+            Unity, over 40 so far, that teach vocational skills from electric vehicles to plumbing
             to robotics.
           </p>
           <div className="hero__actions hero__later">

@@ -75,7 +75,7 @@ export const projects = [
     tools: ['Unity 6', 'C#', 'Unity Timeline', 'Visual Scripting', 'Localization'],
     credit: credits.ncert,
     media: 'robot',
-    preview: 'logic-system',
+    preview: 'installing-wheels',
     cover: true,
     coverCredit: coverCredits.magnific,
     hero: { name: 'cover', w: 1600, h: 1067, alt: 'Cover photograph: a four-wheeled line-follower robot with wiring and sensors, seen from above.' },

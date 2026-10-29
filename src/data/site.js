@@ -28,7 +28,7 @@ export const experience = {
   title: 'Game Designer / Developer',
   period: 'January 2025 – present',
   summary:
-    'I have contributed to nearly 40 simulations for NCERT, published on the DIKSHA platform, working across development, research, quality assurance and educational content. I designed and developed many of them largely or entirely myself; on others I was one member of a larger team.',
+    'I have contributed to over 40 simulations for NCERT, published on the DIKSHA platform, working across development, research, quality assurance and educational content. I designed and developed many of them largely or entirely myself; on others I was one member of a larger team.',
   extras: [
     'Joined as a Game Designer intern in January 2025 and moved to a full-time role in June 2025.',
     'Besides development: on-site research for authenticity, QA testing for other developers and designers, and scripting educational videos.',

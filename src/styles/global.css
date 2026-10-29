@@ -305,4 +305,6 @@ td { color: var(--text-2); }
 /* Touch: press and hold to preview. Vertical scrolling still works over the image. */
 .feature__figure { touch-action: pan-y; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
 .feature__hint { display: none; position: absolute; left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(21, 23, 27, 0.78); color: var(--text); font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.04em; pointer-events: none; transition: opacity .3s; }
-@media (hover: none) { .feature__hint { display: block; } .feature__figure:has(.feature__preview.is-playing) .feature__hint { opacity: 0; } }
+@media (hover: hover) { .feature__hint--mouse { display: block; } }
+@media (hover: none) { .feature__hint--touch { display: block; } }
+.feature__figure:has(.feature__preview.is-playing) .feature__hint { opacity: 0; }

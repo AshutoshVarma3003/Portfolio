@@ -105,7 +105,12 @@ export default function ProjectFeature({ project, index }) {
               tabIndex={-1}
             />
           )}
-          {preview && <span className="feature__hint" aria-hidden="true">Hold to preview</span>}
+          {preview && (
+            <>
+              <span className="feature__hint feature__hint--mouse" aria-hidden="true">Hover to preview</span>
+              <span className="feature__hint feature__hint--touch" aria-hidden="true">Hold to preview</span>
+            </>
+          )}
         </figure>
         <Credit credit={cover ? coverCredit : credit} />
       </div>
