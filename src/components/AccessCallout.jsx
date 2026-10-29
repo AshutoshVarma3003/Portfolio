@@ -27,8 +27,7 @@ export default function AccessCallout({ access }) {
           </p>
           {access.hint && (
             <p className="access-callout__hint">
-              <span className="access-callout__icon" aria-hidden="true">💡</span>
-              <span><strong>How to access the 3D lab:</strong> {access.hint}</span>
+              <strong>How to access the 3D lab:</strong> {access.hint}
             </p>
           )}
         </div>
