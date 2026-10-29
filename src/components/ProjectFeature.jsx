@@ -10,6 +10,7 @@ const SIZES = '(min-width: 900px) 700px, 100vw';
 // the entries alternate sides. DOM order is image then text so mobile reads
 // image-first; desktop reordering is done in CSS.
 // With a mouse, hovering the image plays a short silent loop from the project's video.
+// On touch screens, pressing and holding plays it, and dragging sideways while holding scrubs through it.
 export default function ProjectFeature({ project, index }) {
   const { slug, title, kicker, summary, role, tools, credit, media, hero, fit, bg, cover, coverCredit, preview } = project;
   const num = String(index + 1).padStart(2, '0');
@@ -20,6 +21,9 @@ export default function ProjectFeature({ project, index }) {
   const [hovering, setHovering] = useState(false);
   const [everHovered, setEverHovered] = useState(false);
   const vref = useRef(null);
+  const timer = useRef(null);
+  const held = useRef(false);
+  const startX = useRef(0);
 
   useEffect(() => {
     const v = vref.current;
@@ -38,6 +42,38 @@ export default function ProjectFeature({ project, index }) {
     setHovering(true);
   };
 
+  const onDown = (e) => {
+    if (!preview || e.pointerType !== 'touch') return;
+    startX.current = e.clientX;
+    clearTimeout(timer.current);
+    timer.current = setTimeout(() => {
+      held.current = true;
+      setEverHovered(true);
+      setHovering(true);
+    }, 300);
+  };
+
+  const onMove = (e) => {
+    if (e.pointerType !== 'touch') return;
+    if (!held.current) {
+      // moved before the hold registered: the person is scrolling, not previewing
+      if (Math.abs(e.clientX - startX.current) > 10) clearTimeout(timer.current);
+      return;
+    }
+    const v = vref.current;
+    if (v && v.duration && Math.abs(e.clientX - startX.current) > 12) {
+      const r = e.currentTarget.getBoundingClientRect();
+      v.pause();
+      v.currentTime = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * v.duration;
+    }
+  };
+
+  const onUp = () => {
+    clearTimeout(timer.current);
+    setHovering(false);
+    // keep the flag briefly so the click that follows a hold does not open the page
+    setTimeout(() => { held.current = false; }, 80);
+  };
   return (
     <article className={cls}>
       <div className="feature__visual">
@@ -46,6 +82,12 @@ export default function ProjectFeature({ project, index }) {
           style={fit === 'contain' && bg ? { background: bg } : undefined}
           onPointerEnter={onEnter}
           onPointerLeave={() => setHovering(false)}
+          onPointerDown={onDown}
+          onPointerMove={onMove}
+          onPointerUp={onUp}
+          onPointerCancel={onUp}
+          onClickCapture={(e) => { if (held.current) e.preventDefault(); }}
+          onContextMenu={(e) => { if (preview && held.current) e.preventDefault(); }}
         >
           <Link to={`/work/${slug}`} tabIndex={-1} aria-hidden="true" className="feature__imglink">
             <Media slug={media} item={hero} sizes={SIZES} />
@@ -63,6 +105,7 @@ export default function ProjectFeature({ project, index }) {
               tabIndex={-1}
             />
           )}
+          {preview && <span className="feature__hint" aria-hidden="true">Hold to preview</span>}
         </figure>
         <Credit credit={cover ? coverCredit : credit} />
       </div>

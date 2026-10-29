@@ -96,8 +96,8 @@ ul { margin: 0; padding: 0; }
 }
 
 /* Hero */
-.hero { position: relative; min-height: min(86vh, 800px); display: flex; align-items: flex-end; overflow: hidden; border-bottom: 1px solid var(--border); }
-.hero__media { position: absolute; inset: 0; }
+.hero { position: relative; min-height: 560px; min-height: max(560px, calc(100vh - var(--nav-h))); min-height: max(560px, calc(100svh - var(--nav-h))); display: flex; align-items: flex-end; overflow: hidden; border-bottom: 1px solid var(--border); }
+.hero__media { position: absolute; inset: 0; overflow: hidden; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; }
 .hero__media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(21,23,27,.97) 0%, rgba(21,23,27,.82) 45%, rgba(21,23,27,.35) 100%); }
 @media (min-width: 900px) {
@@ -113,7 +113,7 @@ ul { margin: 0; padding: 0; }
 .hero__credit { position: absolute; right: var(--gutter); bottom: var(--s2); margin: 0; font-size: 0.6875rem; color: var(--text-2); text-align: right; z-index: 1; }
 .hero__credit a { color: var(--text-2); }
 @media (max-width: 899px) {
-  .hero { display: block; min-height: 0; }
+  .hero { display: block; }
   .hero__media { position: relative; inset: auto; aspect-ratio: 4 / 3; max-height: 70vh; }
   .hero__media img { object-position: 50% 30%; }
   .hero__media::after { background: linear-gradient(to top, rgba(21,23,27,1) 0%, rgba(21,23,27,.2) 40%, rgba(21,23,27,0) 100%); }
@@ -301,3 +301,8 @@ td { color: var(--text-2); }
   .hero--intro.hero--done .hero__later { opacity: 1; transform: none; }
   .hero--intro .hero__actions.hero__later { transition-delay: .15s; }
 }
+
+/* Touch: press and hold to preview. Vertical scrolling still works over the image. */
+.feature__figure { touch-action: pan-y; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.feature__hint { display: none; position: absolute; left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(21, 23, 27, 0.78); color: var(--text); font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.04em; pointer-events: none; transition: opacity .3s; }
+@media (hover: none) { .feature__hint { display: block; } .feature__figure:has(.feature__preview.is-playing) .feature__hint { opacity: 0; } }
