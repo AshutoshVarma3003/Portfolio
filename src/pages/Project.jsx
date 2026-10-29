@@ -7,6 +7,7 @@ import Blocks from '../components/Blocks.jsx';
 import ImageFigure from '../components/ImageFigure.jsx';
 import VideoPlayer from '../components/VideoPlayer.jsx';
 import Lightbox from '../components/Lightbox.jsx';
+import AccessCallout from '../components/AccessCallout.jsx';
 import { projects, getProject } from '../data/projects.js';
 import { cases } from '../data/cases/index.js';
 
@@ -56,9 +57,18 @@ export default function Project() {
       <PageMeta title={p.title} description={p.summary} />
 
       <header className="case-head container">
-        <p className="label">{p.kicker}</p>
+        <div className="case-head__eyebrow">
+          <p className="label">{p.kicker}</p>
+          {p.access && (
+            <span className={`status-pill status-pill--${p.access.status}`}>
+              <span className="status-pill__dot" />
+              {p.access.badge}
+            </span>
+          )}
+        </div>
         <h1 className="h1 case-head__title">{p.title}</h1>
         <p className="lead narrow">{p.summary}</p>
+        <AccessCallout access={p.access} />
       </header>
 
       <div className="container">

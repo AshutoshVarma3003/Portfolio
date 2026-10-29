@@ -12,7 +12,7 @@ const SIZES = '(min-width: 900px) 700px, 100vw';
 // With a mouse, hovering the image plays a short silent loop from the project's video.
 // On touch screens, pressing and holding plays it, and dragging sideways while holding scrubs through it.
 export default function ProjectFeature({ project, index }) {
-  const { slug, title, kicker, summary, role, tools, credit, media, hero, fit, bg, cover, coverCredit, preview } = project;
+  const { slug, title, kicker, summary, role, tools, credit, media, hero, fit, bg, cover, coverCredit, preview, access } = project;
   const num = String(index + 1).padStart(2, '0');
   const cls = ['feature', index % 2 ? 'feature--reverse' : '', fit === 'contain' ? 'feature--contain' : '']
     .filter(Boolean)
@@ -74,6 +74,7 @@ export default function ProjectFeature({ project, index }) {
     // keep the flag briefly so the click that follows a hold does not open the page
     setTimeout(() => { held.current = false; }, 80);
   };
+
   return (
     <article className={cls}>
       <div className="feature__visual">
@@ -116,7 +117,15 @@ export default function ProjectFeature({ project, index }) {
       </div>
 
       <div className="feature__text">
-        <p className="label">{num} · {kicker}</p>
+        <div className="feature__eyebrow">
+          <p className="label">{num} · {kicker}</p>
+          {access && (
+            <span className={`status-pill status-pill--${access.status}`}>
+              <span className="status-pill__dot" />
+              {access.badge}
+            </span>
+          )}
+        </div>
         <h3 className="feature__title">
           <Link to={`/work/${slug}`}>{title}</Link>
         </h3>
@@ -125,9 +134,22 @@ export default function ProjectFeature({ project, index }) {
           <div><dt>Role</dt><dd>{role}</dd></div>
           <div><dt>Tools</dt><dd>{tools.join(' · ')}</dd></div>
         </dl>
-        <Link to={`/work/${slug}`} className="arrow-link">
-          Read case study <span aria-hidden="true">→</span>
-        </Link>
+        <div className="feature__actions">
+          <Link to={`/work/${slug}`} className="arrow-link">
+            Read case study <span aria-hidden="true">→</span>
+          </Link>
+          {access?.url && (
+            <a
+              href={access.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="feature__play-link"
+              title="Requires free DIKSHA account"
+            >
+              Play on {access.platform} <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

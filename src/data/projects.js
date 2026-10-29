@@ -19,6 +19,15 @@ export const projects = [
     fit: 'contain',
     bg: '#003152',
     hero: { name: 'cover', w: 1600, h: 1600, alt: 'Cover illustration: a cut-away diagram of a car showing its chassis and drivetrain parts.' },
+    access: {
+      status: 'released',
+      badge: 'Released on DIKSHA',
+      platform: 'DIKSHA',
+      url: 'https://diksha.gov.in/resources/play/collection/do_31434931594686464017969?contentType=TextBook',
+      actionLabel: 'Play Simulation on DIKSHA',
+      requiresLogin: true,
+      hint: 'On the textbook collection page, look for "Simulation Content" in the Virtual Skill Lab to launch the 3D simulation and videos.',
+    },
   },
   {
     slug: 'bar-bending-simulator',
@@ -32,6 +41,17 @@ export const projects = [
     fit: 'contain',
     media: 'bar',
     hero: { name: 'machine-highlighted', w: 1600, h: 1624, alt: 'The Bar Bending Simulator machine: a white cabinet with a tilted touchscreen and a steel bar passing through the bending head.' },
+    access: {
+      status: 'onsite',
+      badge: 'On-site Deployment (L&T)',
+      platform: 'L&T CSTI Centres',
+      notice:
+        'Deployed exclusively on-site paired with physical bending machine workstations across L&T Construction Skills Training Institutes in India (including CSTI Pilkhuwa, Jadcherla, and Mayurbhanj). Because it connects directly to hardware telemetry, there is no public web build.',
+      links: [
+        { label: 'AMMACHI Labs Project Page', href: 'https://ammachilabs.org/bar-bending-simulator/' },
+        { label: 'Amrita University Feature', href: 'https://www.amrita.edu/project/bar-bending-simulator-for-lt/' },
+      ],
+    },
   },
   {
     slug: 'cpr-aed-simulation',
@@ -49,6 +69,14 @@ export const projects = [
     fit: 'contain',
     bg: '#ffffff',
     hero: { name: 'cover', w: 1600, h: 1051, alt: 'Cover illustration: two paramedics giving chest compressions and ventilation to a patient on a stretcher.' },
+    access: {
+      status: 'upcoming',
+      badge: 'Upcoming on AMPLE',
+      platform: 'AMPLE',
+      platformUrl: 'https://2ndfoundation.amplelms.com/',
+      notice:
+        'Simulation development is complete. Currently in platform integration for AMMACHI Labs’ AMPLE learning platform; playable access will be published upon scheduled release.',
+    },
   },
   {
     slug: 'sensor-faucet',
@@ -64,6 +92,15 @@ export const projects = [
     cover: true,
     coverCredit: coverCredits.pexels,
     hero: { name: 'cover', w: 1600, h: 1067, alt: 'Cover photograph: hands under water running from a sensor faucet into a white basin.' },
+    access: {
+      status: 'released',
+      badge: 'Released on DIKSHA',
+      platform: 'DIKSHA',
+      url: 'https://diksha.gov.in/resources/play/collection/do_31434930326468198417918?contentType=TextBook',
+      actionLabel: 'Play Simulation on DIKSHA',
+      requiresLogin: true,
+      hint: 'On the textbook collection page, look for "Simulation Content" in the Virtual Skill Lab to launch the 3D simulation and videos.',
+    },
   },
   {
     slug: 'logic-robot',
@@ -79,6 +116,13 @@ export const projects = [
     cover: true,
     coverCredit: coverCredits.magnific,
     hero: { name: 'cover', w: 1600, h: 1067, alt: 'Cover photograph: a four-wheeled line-follower robot with wiring and sensors, seen from above.' },
+    access: {
+      status: 'upcoming',
+      badge: 'Upcoming on DIKSHA',
+      platform: 'DIKSHA',
+      notice:
+        'Simulation development is complete. Currently undergoing final QA in the release pipeline for NCERT’s DIKSHA portal; playable link will be published upon release.',
+    },
   },
 ];
 
