@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import PageMeta from '../components/PageMeta.jsx';
 import Media from '../components/Media.jsx';
@@ -15,6 +15,27 @@ export default function Project() {
   const p = getProject(slug);
   const c = p && cases[slug];
   const [zoom, setZoom] = useState(null);
+  const [active, setActive] = useState('');
+
+  // Highlight the section being read in the sticky index.
+  useEffect(() => {
+    const els = [...document.querySelectorAll('[data-spy]')];
+    if (!els.length || !('IntersectionObserver' in window)) return undefined;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id);
+        });
+      },
+      { rootMargin: '-130px 0px -60% 0px' },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [slug]);
+
+  const goTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  };
 
   if (!p || !c) {
     return (
@@ -26,6 +47,9 @@ export default function Project() {
   }
 
   const others = projects.filter((x) => x.slug !== slug);
+  const idx = projects.findIndex((x) => x.slug === slug);
+  const prev = projects[(idx - 1 + projects.length) % projects.length];
+  const next = projects[(idx + 1) % projects.length];
 
   return (
     <>
@@ -55,9 +79,23 @@ export default function Project() {
         </dl>
       </div>
 
+      <div className="case-main">
+      <nav className="case-nav" aria-label="On this page">
+        <div className="container case-nav__inner">
+          {c.sections.map((s, i) => (
+            <button key={s.title} type="button" className={`case-nav__btn ${active === `sec-${i}` ? 'is-active' : ''}`} aria-current={active === `sec-${i}` ? 'true' : undefined} onClick={() => goTo(`sec-${i}`)}>
+              {s.title}
+            </button>
+          ))}
+          <button type="button" className={`case-nav__btn ${active === 'media' ? 'is-active' : ''}`} aria-current={active === 'media' ? 'true' : undefined} onClick={() => goTo('media')}>
+            Media
+          </button>
+        </div>
+      </nav>
+
       <div className="container">
         {c.sections.map((s, i) => (
-          <section key={s.title} className="case-section" aria-labelledby={`s-${i}`}>
+          <section key={s.title} id={`sec-${i}`} data-spy className="case-section" aria-labelledby={`s-${i}`}>
             <h2 id={`s-${i}`} className="case-section__title">
               <span className="label">{String(i + 1).padStart(2, '0')}</span>
               {s.title}
@@ -69,7 +107,7 @@ export default function Project() {
         ))}
       </div>
 
-      <section className="section section--surface" aria-labelledby="media-title">
+      <section id="media" data-spy className="section section--surface case-media" aria-labelledby="media-title">
         <div className="container">
           <header className="section__head">
             <p className="label">Selected media</p>
@@ -102,6 +140,17 @@ export default function Project() {
         </div>
       </section>
 
+      <nav className="container pn" aria-label="More projects">
+        <Link to={`/work/${prev.slug}`} className="pn__link">
+          <span className="label">← Previous project</span>
+          <span className="pn__title">{prev.title}</span>
+        </Link>
+        <Link to={`/work/${next.slug}`} className="pn__link pn__link--next">
+          <span className="label">Next project →</span>
+          <span className="pn__title">{next.title}</span>
+        </Link>
+      </nav>
+
       <section className="section container" aria-labelledby="related-title">
         <h2 id="related-title" className="h2">Other projects</h2>
         <ul className="related">
@@ -118,6 +167,8 @@ export default function Project() {
           ))}
         </ul>
       </section>
+
+      </div>
 
       <Lightbox item={zoom} onClose={() => setZoom(null)} />
     </>

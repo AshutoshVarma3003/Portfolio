@@ -1,11 +1,37 @@
+import { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from '../components/PageMeta.jsx';
 import ProjectFeature from '../components/ProjectFeature.jsx';
+import TypedHeadline from '../components/TypedHeadline.jsx';
 import { projects } from '../data/projects.js';
 import { site, experience } from '../data/site.js';
 import { asset } from '../lib.js';
 
+const HEADLINE = 'I design and build interactive 3D experiences.';
+
+// Play the intro once per visit, and never for people who prefer reduced motion.
+function shouldPlayIntro() {
+  try {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+    if (sessionStorage.getItem('heroIntro')) return false;
+  } catch {
+    return false;
+  }
+  return true;
+}
+
 export default function Home() {
+  const [play] = useState(shouldPlayIntro);
+  const [done, setDone] = useState(!play);
+  const finish = useCallback(() => {
+    setDone(true);
+    try {
+      sessionStorage.setItem('heroIntro', '1');
+    } catch {
+      // storage unavailable: the intro may replay, which is harmless
+    }
+  }, []);
+
   return (
     <>
       <PageMeta
@@ -13,7 +39,7 @@ export default function Home() {
         description="Game designer and developer building interactive 3D simulations and educational experiences in Unity at AMMACHI Labs. Five case studies."
       />
 
-      <section className="hero" aria-labelledby="hero-title">
+      <section className={`hero ${play ? 'hero--intro' : ''} ${done ? 'hero--done' : ''}`} aria-labelledby="hero-title">
         <div className="hero__media">
           <img
             src={asset('media/me/portrait-crop-1640.webp')}
@@ -27,13 +53,13 @@ export default function Home() {
         </div>
         <div className="container hero__inner">
           <p className="label">{site.role}</p>
-          <h1 id="hero-title" className="hero__title">I design and build interactive 3D experiences.</h1>
-          <p className="hero__lead">
+          <TypedHeadline id="hero-title" className="hero__title" text={HEADLINE} play={play} onDone={finish} />
+          <p className="hero__lead hero__later">
             I am a game designer and developer at AMMACHI Labs. I build educational simulations in
             Unity, nearly 40 so far, that teach vocational skills from electric vehicles to plumbing
             to robotics.
           </p>
-          <div className="hero__actions">
+          <div className="hero__actions hero__later">
             <Link to="/work" className="button">View work</Link>
             <a className="button button--ghost" href={asset(site.cv)} target="_blank" rel="noopener noreferrer">
               Download CV

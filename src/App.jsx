@@ -8,6 +8,7 @@ import Project from './pages/Project.jsx';
 import About from './pages/About.jsx';
 import CV from './pages/CV.jsx';
 import Contact from './pages/Contact.jsx';
+import { useReveal } from './hooks.js';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -18,12 +19,14 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
+  useReveal(pathname);
   return (
     <>
       <a href="#main" className="skip-link">Skip to content</a>
       <ScrollToTop />
       <Nav />
-      <main id="main">
+      <main id="main" key={pathname} className="page">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
