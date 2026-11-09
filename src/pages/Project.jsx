@@ -125,7 +125,7 @@ export default function Project() {
             <p className="lead narrow">{c.mediaIntro}</p>
           </header>
           {c.groups.map((g) => (
-            <div key={g.title} className="mgroup" style={{ '--ar': c.aspect }}>
+            <div key={g.title} className="mgroup" style={{ '--ar': g.aspect || c.aspect }}>
               <div className="mgroup__head">
                 <h3 className="mgroup__title">{g.title}</h3>
                 <p className="muted">{g.text}</p>

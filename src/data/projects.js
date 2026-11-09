@@ -40,6 +40,7 @@ export const projects = [
     credit: credits.barBending,
     fit: 'contain',
     media: 'bar',
+    preview: 'demonstration',
     hero: { name: 'machine-highlighted', w: 1600, h: 1624, alt: 'The Bar Bending Simulator machine: a white cabinet with a tilted touchscreen and a steel bar passing through the bending head.' },
     access: {
       status: 'onsite',

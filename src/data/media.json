@@ -106,9 +106,43 @@
         "name": "machine-highlighted",
         "w": 1600,
         "h": 1624
+      },
+      {
+        "name": "demo-1",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "demo-2",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "name": "group-demo",
+        "w": 976,
+        "h": 652
       }
     ],
-    "videos": []
+    "videos": [
+      {
+        "name": "configuration",
+        "w": 1280,
+        "h": 720,
+        "duration": 16
+      },
+      {
+        "name": "demonstration",
+        "w": 1280,
+        "h": 720,
+        "duration": 22
+      },
+      {
+        "name": "result-screen",
+        "w": 1280,
+        "h": 720,
+        "duration": 4
+      }
+    ]
   },
   "cpr": {
     "images": [

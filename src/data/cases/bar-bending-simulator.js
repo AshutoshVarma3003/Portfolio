@@ -94,11 +94,25 @@ export default {
       ],
     },
   ],
-  mediaIntro: 'Only two photographs of the machine are available for this project, because the simulator is installed at training centres. Both are credited to AMMACHI Labs and L&T.',
+  mediaIntro: 'Photographs from training centres, and recordings of the simulator being used on the machine. All are credited to AMMACHI Labs and L&T.',
   groups: [
     { title: 'The machine', text: 'A workstation with a tilted touchscreen, a feed and bending head, and an electronics cabinet.', items: [
       { t: 'img', n: 'machine-highlighted', fit: 'contain', cap: 'The Bar Bending Simulator workstation: a white cabinet with a tilted touchscreen, and a steel bar passing through the bending head.' },
       { t: 'img', n: 'digital-twin-in-use', cap: 'A trainee using the simulator at a training centre.' },
+      { t: 'img', n: 'group-demo', cap: 'Trainees gathered around the simulator while one works the bending lever.' },
+    ] },
+    { title: 'In use', text: 'Trainees work the touchscreen and the lever together: the screen shows the exercise and the lever does the bending.', aspect: '16 / 9', items: [
+      { t: 'img', n: 'demo-1', cap: 'A trainee at the machine, with one hand on the lever and the exercise on screen.' },
+      { t: 'img', n: 'demo-2', cap: 'Tilting the touchscreen and holding the bending lever.' },
+    ] },
+    { title: 'Setting up an exercise', text: 'Before bending, the trainee chooses what to practise.', aspect: '16 / 9', items: [
+      { t: 'vid', n: 'configuration', cap: 'Choosing the bend shape, then the bar diameter (8, 10 or 12 mm) and the grade of steel on the touchscreen.' },
+    ] },
+    { title: 'Bending', text: 'The machine’s sensors drive the digital twin, so the bar on screen bends as the lever moves.', aspect: '16 / 9', items: [
+      { t: 'vid', n: 'demonstration', cap: 'Bending a bar with the lever while the screen prompts each step, including bending to the target angle and rotating back to zero.' },
+    ] },
+    { title: 'Session results', text: 'The results screen sums up what the trainee did in the session.', aspect: '16 / 9', items: [
+      { t: 'vid', n: 'result-screen', cap: 'The results screen: each bend, the angle that was expected and the result achieved, with options to change the shape or try again.' },
     ] },
   ],
 };
